@@ -58,8 +58,8 @@ Welcome to Currency Converter
 3. Exit
 **************************
             ''')
-        op=int(input("Enter your choice (1/2/3):"))
-        if op==1:
+        n=int(input("Enter your choice (1/2/3):"))
+        if n==1:
                 while True:
                     print("No. \tConversion method       \tConversion Rate ")
                     print("**   ******************        *******************")
@@ -71,15 +71,15 @@ Welcome to Currency Converter
                     choice= int(input("Enter your choice (either: 1/2/3/4):"))
                     if choice==1:
                         print("You are now converting from AED to Euros.")
-                        amount=float(input("Enter your amount:"))
+                        amount=float(input("Enter your amount: "))
                         aed_to_eur(amount)  
                     elif choice==2:
                         print("You are now converting from AED to British Pounds.")
-                        amount=float(input("Enter your amount:"))
+                        amount=float(input("Enter your amount: "))
                         aed_to_britishPound(amount)
                     elif choice==3:
                         print("You are now converting from AED to US Dollars.")
-                        amount=float(input("Enter your amount:"))
+                        amount=float(input("Enter your amount: "))
                         aed_to_dollar(amount)
                     elif choice==4:
                         print("Currency converter is closed!")
@@ -87,7 +87,7 @@ Welcome to Currency Converter
                         print("Input Error! Try again.")
                         continue
                     break
-        elif op==2:
+        elif n==2:
                 while True:
                     print("Sno. \tConversion Direction       \tConversion Rate ")
                     print("***   ******************       ******************")
@@ -99,15 +99,15 @@ Welcome to Currency Converter
                     select= int(input("Enter your choice (either: 1/2/3/4):"))
                     if select==1:
                         print("You are now converting from Euros to AED.")
-                        amount=float(input("Enter your amount:"))
+                        amount=float(input("Enter your amount: "))
                         eur_to_aed(amount) 
                     elif select==2:
                         print("You are now converting from British Pounds to AED.")
-                        amount=float(input("Enter your amount:"))
+                        amount=float(input("Enter your amount: "))
                         britishPound_to_aed(amount)
                     elif select==3:
                         print("You are now converting from US Dollars to AED.")
-                        amount=float(input("Enter your amount:"))
+                        amount=float(input("Enter your amount: "))
                         dollar_to_aed(amount)
                     elif select==4:
                         print("Currency converter is closed!")
@@ -115,19 +115,20 @@ Welcome to Currency Converter
                         print("Input Error! Try again.")
                         continue
                     break
-        elif op==3:
-                print("Currency converter is closed!")
+        elif n==3:
+                print("Program is exit!")
                 break
         else:
-                print("Input Error! Try again.")
+                print("Invalid input!")
+                print("Try again.")
                 continue
-        a = int(input('Do you want to continue conversion? Enter 1 if you say "Yes",or 0 if you say "No". '))
-        if a==1:
+        m= int(input('Do you want to continue conversion? Enter 1 if you say "Yes",or 0 if you say "No". '))
+        if m==1:
              continue
-        elif a==0:
+        elif m==0:
              break
         else:
-             print('error!')  
+             print('Invalid input!')  
              break          
 
 if __name__=="__main__":
